@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Palabras Diccionario";
+}
+
+<h2>Diccionario de palabras</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Español</th>
+            <th>Inglés</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (string item in ViewBag.GuardarPalabras)
+        {
+            <tr>
+                @foreach (string datos in item.Split(' '))
+                {
+                    <td>@datos</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
